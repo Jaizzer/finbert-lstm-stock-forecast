@@ -44,7 +44,7 @@ The goal is to improve predictive accuracy by leveraging both quantitative and q
 1. Clone the repository:
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Jaizzer/finbert-lstm-stock-forecast.git
     cd project_root
     ```
 
