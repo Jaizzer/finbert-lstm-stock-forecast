@@ -45,7 +45,7 @@ The goal is to improve predictive accuracy by leveraging both quantitative and q
 
     ```bash
     git clone https://github.com/Jaizzer/finbert-lstm-stock-forecast.git
-    cd project_root
+    cd finbert-lstm-stock-forecast
     ```
 
 2. Create a virtual environment and install dependencies
