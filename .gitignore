@@ -1,0 +1,17 @@
+# Python Environment
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Data Files (Keep the folders, hide the big CSVs)
+data/raw/*.csv
+data/processed/*.csv
+
+# System / IDE Files
+.DS_Store
+.vscode/
+.ipynb_checkpoints/
+
+# Environment Variables
+.env
