@@ -20,19 +20,27 @@ if [ -f requirements.txt ]; then
     pip install -r requirements.txt
 else
     echo "⚠️ requirements.txt not found! Installing base packages..."
-    pip install yfinance pandas transformers torch tensorflow ipykernel
+    pip install yfinance pandas transformers torch tensorflow ipykernel kagglehub
 fi
 
 # 4. Register Jupyter Kernel
 echo "🧬 Registering Jupyter Kernel..."
 python -m ipykernel install --user --name=finbert-lstm-stock-forecast --display-name "Python (finbert-lstm-stock-forecast)"
 
-# 5. Download Initial Data
-if [ -f scripts/download_data.py ]; then
+# 5. Download Price Data
+if [ -f scripts/download-price-data.py ]; then
     echo "📊 Downloading price data..."
     python scripts/download-price-data.py
 else
-    echo "ℹ️ scripts/download-price-data.py not found. Skipping data download."
+    echo "ℹ️ scripts/download-price-data.py not found. Skipping price download."
+fi
+
+# 6. Download News Data (New Section)
+if [ -f scripts/download-news-data.py ]; then
+    echo "📰 Downloading news data via kagglehub..."
+    python scripts/download-news-data.py
+else
+    echo "ℹ️ scripts/download-news-data.py not found. Skipping news download."
 fi
 
 echo "✅ Setup complete! To start working, run: source venv/bin/activate"
